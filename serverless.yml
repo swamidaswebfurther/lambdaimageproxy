@@ -1,0 +1,23 @@
+
+service: finalcode
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+
+  include:
+    - utils/**
+
+functions:
+  imageproxyfinalcode:
+    handler: index.handler
+    events:
+      - http:
+          path: image
+          method: get
+
+plugins:
+  - serverless-offline
+
