@@ -11,4 +11,9 @@
 # steps to run in local machine
 	1: npm install
 	2: to run application : serverless offline
+# API Side settings
+	1. go to settings 
+		- go to Binary Media Types
+			- add : image/* , image/png , image/jpeg, */*
+	2. after that deploy api 
 
